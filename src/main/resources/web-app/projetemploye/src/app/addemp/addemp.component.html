@@ -1,0 +1,45 @@
+<div style="width: 400px; margin: auto;">
+    <div class="submit-form">
+      <div *ngIf="!submitted">
+        <div class="form-group">
+          <label for="fist_name">Title</label>
+          <input
+            type="text"
+            class="form-control"
+            id="fist_name"
+            required
+            [(ngModel)]="first_name"
+            name="fist_name"
+          />
+        </div>
+  
+        <div class="form-group">
+          <label for="last_name">Last Name</label>
+          <input
+            class="form-control"
+            id="last_name"
+            required
+            [(ngModel)]="employer.last_name"
+            name="last_name"
+          />
+        </div>
+        <div class="form-group">
+            <label for="Age">Age</label>
+            <input
+              class="form-control"
+              id="age"
+              required
+              [(ngModel)]="employe.age"
+              name="age"
+            />
+          </div>
+  
+        <button (click)="saveemp()" class="btn btn-success">Submit</button>
+      </div>
+  
+      <div *ngIf="submitted">
+        <h4>You submitted successfully!</h4>
+        <button class="btn btn-success" (click)="newemp()">Add</button>
+      </div>
+    </div>
+  </div>
